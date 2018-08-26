@@ -1,0 +1,71 @@
+body {
+    margin: 0%;
+    background-color: white;    
+    height: 1000px;
+}
+
+#header {
+    height: 50px;
+    width: 100%;
+    background-color: #1f1e1e;
+    // position: fixed;
+    // top: 0px;
+    display: grid;
+    grid-template-columns: 10% 10% 50% 15% 15%;
+    align-items: center;
+    text-align: center;
+    color: wheat;
+}
+#contenido {
+    width: 99%;
+    height: 2000px;
+    // display: grid;
+    // background-color: royalblue;
+    border: 2px solid #1f1e1e;
+    #contenido__video {
+        width: 100%; 
+        height: 777px;
+        background-color: red;
+    }
+    
+    #contenido__btCajaComentarios {
+        height: 50px;
+        background-color: aqua;
+        border-top: 2px solid black;
+        border-bottom: 1px solid black;
+        text-align: center;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            margin: 4% 9%;
+        }
+    }
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    #contenido__cajaComentarios {
+        width: 99%;
+        height: 300px;
+        border: 2px solid blue;
+        transform:  scaleY(0);
+        display: none;
+        transition: all 3s;
+
+        .cajaComentarios__comentario {
+            border-top: 2px solid black;
+            border-bottom: 1px solid black;
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: black;
+                padding: 4% 9%; 
+            }
+        }
+
+        &:target {
+            display: block;
+            transform: scaleY(1);
+        }
+    }
+}
+
